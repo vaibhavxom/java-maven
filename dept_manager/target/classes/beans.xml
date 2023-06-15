@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="
+   http://www.springframework.org/schema/beans     
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+   
+   
+   <bean id="department" class="com.demo.bean.Department">
+   	<constructor-arg index="0" type="java.lang.String" value="01"/>
+   	<constructor-arg index="1" type="java.lang.String" value="sales"/>
+   	<constructor-arg index="2" type="java.lang.String" value="Pune"/>
+   </bean>
+   
+   <bean id="managerbean" class="com.demo.bean.Manager" autowire="byName">
+   	<property name="managerId" value="101"/>
+   	<property name="managerName" value="Rushi"/>
+   	
+   </bean>
+   
+   </beans>
