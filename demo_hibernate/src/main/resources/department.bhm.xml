@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+<class name="com.cocsit.bean.Department" table="dept"> 	
+	<meta attribute="class-description">
+	This tag contains department details
+	</meta>
+<id name="deptno" type="int" column="DEPTNO">
+	<generator class="assigned"/>
+</id>
+<property name="deptName" type="string" column="DNAME"/>
+
+<property name="deptLocation" type="string" column="LOC"/>
+</class>
+
+
+</hibernate-mapping>
