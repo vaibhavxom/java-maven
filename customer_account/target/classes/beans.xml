@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="
+   http://www.springframework.org/schema/beans     
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+   	<!-- dependancy Injection by setter Method -->
+ 
+ <bean id ="accountBean" class="com.cocsit.bean.Account">
+ 	<constructor-arg index="0" type="java.lang.String" value="123456"/>
+ 	<constructor-arg index="1" type="java.lang.String" value="Saving account"/>
+ 	<constructor-arg index="2" type="java.lang.String" value="50000"/>
+ </bean>
+ 
+ <bean id ="customerBean" class="com.cocsit.bean.Customer">
+ 		
+ 	<property name="Id" value="SBI001"/>
+ 	<property name="name" value="Rushi M"/>
+ 	<property name="account" ref="accountBean"/>
+ 	
+	 
+ 
+ </bean>
+ 
+ </beans>
+ 
+ 
+ 
+ 				
